@@ -1,3 +1,4 @@
+import MobileHeader from "@/components/mobile-header";
 import Sidebar from "@/components/sidebar";
 
 type Props = {
@@ -7,8 +8,9 @@ type Props = {
 export default function MainLayout({ children }: Props) {
   return (
     <>
-    <Sidebar />
-      <main className="pl-[256px]">
+    <MobileHeader />
+    <Sidebar className="hidden lg:flex" />
+      <main className="lg:pl-[256px] h-full pt-[50px] lg:pt-0">
         {children}
       </main>
     </>
