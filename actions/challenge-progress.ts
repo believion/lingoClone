@@ -2,7 +2,7 @@
 
 import { auth } from "@clerk/nextjs";
 import { revalidatePath } from "next/cache";
-import { getUserProgress } from "@/db/queries";
+import {getUserProgress, getUserSubscription} from "@/db/queries";
 import db from "@/db/drizzle";
 import { and, eq } from "drizzle-orm";
 import { challengeProgress, challenges, userProgress } from "@/db/schema";
@@ -15,6 +15,7 @@ export const upsertChallengeProgress = async (challengeId: number) => {
   }
 
   const currentUserProgress = await getUserProgress();
+  const userSubscription = await getUserSubscription();
   //TODO: Handle subscription query later
 
   if (!currentUserProgress) {
@@ -40,8 +41,8 @@ export const upsertChallengeProgress = async (challengeId: number) => {
 
   const isPractice = !!existingChallengeProgress;
 
-  //TODO: later add the condition that is user has a subscription, this error should not be returned
-  if (currentUserProgress.hearts === 0 && !isPractice) {
+
+  if (currentUserProgress.hearts === 0 && !isPractice && !userSubscription?.isActive) {
     return { error: "hearts" };
   }
 

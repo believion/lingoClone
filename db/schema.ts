@@ -6,6 +6,7 @@ import {
   text,
   integer,
   boolean,
+  timestamp,
 } from "drizzle-orm/pg-core";
 
 export const courses = pgTable("courses", {
@@ -131,3 +132,12 @@ export const courseRelations = relations(courses, ({ many }) => ({
   userProgress: many(userProgress),
   units: many(units),
 })); // this is only used for helping purpose, it doesn't change the schema
+
+export const userSubscription = pgTable("user_subscription", {
+  id: serial("id").primaryKey(),
+  userId: text("user_id").notNull().unique(),
+  stripeCustomerId: text("stripe_customer_id").notNull().unique(),
+  stripeSubscriptionId: text("stripe_subscription_id").notNull().unique(),
+  stripePriceId: text("stripe_price_id").notNull(),
+  stripeCurrentPeriodEnd: timestamp("stripe_current_period_end").notNull(),
+});
