@@ -20,7 +20,7 @@ const Sidebar = ({ className }: Props) => {
         <div className="pt-8 pl-4 pb-7 flex items-center gap-x-3">
           <Image src="/hippo.png" height={40} width={40} alt="mascot" />
           <h1 className="font-extrabold text-2xl text-green-600 tracking-wide">
-            Lingo
+            Lingo Expert
           </h1>
         </div>
       </Link>

@@ -1,6 +1,6 @@
-# LingoClone
+# Lingo Expert
 
-Welcome to **LingoClone**, a language learning application inspired by Duolingo. This app aims to provide a seamless and engaging experience for language learners, featuring safe authentication, a modern design, efficient performance, an admin dashboard, and a leaderboard.
+Welcome to **Lingo Expert**, a language learning application inspired by Duolingo. This app aims to provide a seamless and engaging experience for language learners, featuring safe authentication, a modern design, efficient performance, an admin dashboard, and a leaderboard.
 
 ## Features
 
@@ -93,7 +93,7 @@ The leaderboard screen displays users with the highest points, fostering a compe
 
 ## Contributing
 
-We welcome contributions to improve LingoClone! If you have any suggestions, bug reports, or feature requests, feel free to open an issue or submit a pull request. 
+We welcome contributions to improve Lingo Expert! If you have any suggestions, bug reports, or feature requests, feel free to open an issue or submit a pull request. 
 
 1. Fork the repository.
 2. Create a new branch (`git checkout -b feature/your-feature-name`).
@@ -115,4 +115,4 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ---
 
-Happy Learning with **LingoClone**! If you have any questions or need further assistance, please feel free to contact us.
+Happy Learning with **Lingo Expert**! If you have any questions or need further assistance, please feel free to contact us.
